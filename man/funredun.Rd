@@ -4,17 +4,18 @@
 \alias{funredun}
 \title{Functional Redundancy}
 \usage{
-funredun(spDat, funDat)
+funredun(spDat, funDat, method = "bray")
 }
 \arguments{
 \item{spDat}{Data frame with rows as sites, columns as species, and elements as counts}
 
 \item{funDat}{Data frame with rows as species (same as spDat column names), columns as traits, elements as counts, measures, binary, etc.}
+
+\item{method}{Default is Bray-Curtis dissimilarity. Available options includ "manhattan", "euclidian", "canberra", "clark", "bray", "kulczynski", "jaccard", "gower", "altGower", "morisita","horn", "mountford", "raup", "binomial", "chao", "cao", "mahalanobis","chisq" or "chord". See \code{\link[vegan]{vegdist}} for details.}
 }
 \value{
 A data frame with rows as sites and a column of functional redundancy
 }
 \description{
-This function calculates functional redundancy as Simpson's D minus
-dissimilarity between species weighted by the proportions of the species.
+The function calculates functional redundancy as Simpson's D minus dissimilarity between species weighted by the proportions of the species.
 }

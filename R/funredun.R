@@ -1,17 +1,17 @@
 #' Functional Redundancy
 #' 
-#' This function calculates functional redundancy as Simpson's D minus 
-#' dissimilarity between species weighted by the proportions of the species.
+#' The function calculates functional redundancy as Simpson's D minus dissimilarity between species weighted by the proportions of the species.
 #'
 #' @param spDat Data frame with rows as sites, columns as species, and elements as counts
 #' @param funDat Data frame with rows as species (same as spDat column names), columns as traits, elements as counts, measures, binary, etc.
+#' @param method Default is Bray-Curtis dissimilarity. Available options includ "manhattan", "euclidian", "canberra", "clark", "bray", "kulczynski", "jaccard", "gower", "altGower", "morisita","horn", "mountford", "raup", "binomial", "chao", "cao", "mahalanobis","chisq" or "chord". See \code{\link[vegan]{vegdist}} for details. 
 #' @return A data frame with rows as sites and a column of functional redundancy
 #' @export
 
-funredun=function(spDat,funDat){
+funredun=function(spDat,funDat,method='bray'){
 
   #calculates distance between species based on functional traits
-  spDist=vegan::vegdist(funDat,upper=T)
+  spDist=vegan::vegdist(funDat,method=method,upper=T)
   
   #creates a vector of Simpson's diversity for the community
   D=as.vector(vegan::diversity(spDat,index='simpson'))

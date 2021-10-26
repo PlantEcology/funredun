@@ -1,12 +1,12 @@
 Package: funredun
 Title: Calculate Community Functional Redundancy
-Version: 0.1
+Version: 0.2
 Imports: vegan, usedist
 Authors@R: 
     person("Jordan", "Marshall", , "marshalj@pfw.edu", role = c("aut", "cre"),
            comment = c(ORCID = " 0000-0001-6024-3758 "))
 Date: 2021
-Description: Calculates functional redundance of a community based on inputs of species diversity (1-Simpson's D) and functional traits. Disssimilarity between species is calculated as Bray-Curtis dissimilarity. Redundancy calculated as a modified Rao Diversity (1982). 
+Description: Calculates functional redundance of a community based on inputs of species diversity (1-Simpson's D) and functional traits. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
