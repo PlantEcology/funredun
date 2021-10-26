@@ -16,5 +16,5 @@ A data frame with rows as sites and a column of functional redundancy
 }
 \description{
 This function calculates functional redundancy as Simpson's D minus
-dissimilarity between species weighted by the proportions of the species
+dissimilarity between species weighted by the proportions of the species.
 }
