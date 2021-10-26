@@ -9,7 +9,7 @@ funredun(spDat, funDat, method = "bray")
 \arguments{
 \item{spDat}{Data frame with rows as sites, columns as species, and elements as counts}
 
-\item{funDat}{Data frame with rows as species (same as spDat column names), columns as traits, elements as counts, measures, binary, etc.}
+\item{funDat}{Data frame with rows as species (same as spDat column names), columns as functional traits, elements as counts, measures, binary, etc.}
 
 \item{method}{Default is Bray-Curtis dissimilarity. Available options include "manhattan", "euclidian", "canberra", "clark", "bray", "kulczynski", "jaccard", "gower", "altGower", "morisita","horn", "mountford", "raup", "binomial", "chao", "cao", "mahalanobis","chisq" or "chord". See \code{\link[vegan]{vegdist}} for details.}
 }
