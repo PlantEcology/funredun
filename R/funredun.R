@@ -3,8 +3,8 @@
 #' The function calculates functional redundancy as Simpson's D minus dissimilarity between species weighted by the proportions of the species.
 #'
 #' @param spDat Data frame with rows as sites, columns as species, and elements as counts
-#' @param funDat Data frame with rows as species (same as spDat column names), columns as traits, elements as counts, measures, binary, etc.
-#' @param method Default is Bray-Curtis dissimilarity. Available options includ "manhattan", "euclidian", "canberra", "clark", "bray", "kulczynski", "jaccard", "gower", "altGower", "morisita","horn", "mountford", "raup", "binomial", "chao", "cao", "mahalanobis","chisq" or "chord". See \code{\link[vegan]{vegdist}} for details. 
+#' @param funDat Data frame with rows as species (same as spDat column names), columns as functional traits, elements as counts, measures, binary, etc.
+#' @param method Default is Bray-Curtis dissimilarity. Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details. 
 #' @return A data frame with rows as sites and a column of functional redundancy
 #' @export
 
@@ -26,6 +26,9 @@ funredun=function(spDat,funDat,method='bray'){
     }
   }
   
+  #sets progress bar
+  pb=txtProgressBar(min=0,max=nrow(P),style=3,width=50,char="=")
+  
   #empty vectors of Q and FR
   Q=vector()
   FR=vector()
@@ -42,6 +45,7 @@ funredun=function(spDat,funDat,method='bray'){
     
     #calculates function diversity as Simpson's D - Q
     FR[i]=D[i]-Q[i]
+    setTxtProgressBar(pb,i)
   }
   FRoutput=data.frame(cbind(FR))
   names(FRoutput)='Func Redun'
