@@ -11,7 +11,7 @@ funredun(spDat, funDat, method = "bray")
 
 \item{funDat}{Data frame with rows as species (same as spDat column names), columns as functional traits, elements as counts, measures, binary, etc.}
 
-\item{method}{Default is Bray-Curtis dissimilarity. Available options include "manhattan", "euclidian", "canberra", "clark", "bray", "kulczynski", "jaccard", "gower", "altGower", "morisita","horn", "mountford", "raup", "binomial", "chao", "cao", "mahalanobis","chisq" or "chord". See \code{\link[vegan]{vegdist}} for details.}
+\item{method}{Default is Bray-Curtis dissimilarity. Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details.}
 }
 \value{
 A data frame with rows as sites and a column of functional redundancy
