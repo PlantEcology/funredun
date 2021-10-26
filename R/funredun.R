@@ -1,7 +1,7 @@
 #' Functional Redundancy
 #' 
 #' This function calculates functional redundancy as Simpson's D minus 
-#' dissimilarity between species weighted by the proportions of the species
+#' dissimilarity between species weighted by the proportions of the species.
 #'
 #' @param spDat Data frame with rows as sites, columns as species, and elements as counts
 #' @param funDat Data frame with rows as species (same as spDat column names), columns as traits, elements as counts, measures, binary, etc.
