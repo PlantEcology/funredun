@@ -4,11 +4,12 @@
 #'
 #' @param spDat Data frame with rows as sites, columns as species, and elements as counts
 #' @param funDat Data frame with rows as species (same as spDat column names), columns as functional traits, elements as counts, measures, binary, etc.
-#' @param method Default is Bray-Curtis dissimilarity. Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details. 
+#' @param method Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details. Default is Bray-Curtis dissimilarity.
+#' @param redund Redundancy calculation as difference from Simpson's D (R = D - Q) or uniqueness (U = Q/D). Default is difference (TRUE).
 #' @return A data frame with rows as sites and a column of functional redundancy
 #' @export
 
-funredun=function(spDat,funDat,method='bray'){
+funredun=function(spDat,funDat,method='bray',redund=TRUE){
 
   #calculates distance between species based on functional traits
   spDist=vegan::vegdist(funDat,method=method,upper=T)
@@ -43,8 +44,16 @@ funredun=function(spDat,funDat,method='bray'){
       }
     }
     
-    #calculates function diversity as Simpson's D - Q
-    FR[i]=D[i]-Q[i]
+    #calculates function diversity as D-Q or Q/D
+    if (redund==TRUE) {
+      FR[i]=D[i]-Q[i]
+    } else {
+      if (D[i]==0) {
+        FR[i]==NA
+      } else {
+      FR[i]=Q[i]/D[i]
+      }
+    }
     setTxtProgressBar(pb,i)
   }
   FRoutput=data.frame(cbind(FR))
