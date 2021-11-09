@@ -4,7 +4,7 @@ Calculates community functional redundancy using species abundance and functiona
 ## Install
 Installation in R requires <a href="https://cran.r-project.org/package=devtools">devtools</a>. Requires <a href="https://cran.r-project.org/package=vegan">vegan</a> and <a href="https://cran.r-project.org/package=usedist">usedist</a> packages to run.
 ```
-install_github("PlantEcology/funredun")
+devtools::install_github("PlantEcology/funredun")
 ```
 
 ## Data Format
