@@ -22,7 +22,7 @@ funredun(spDat, funDat, method = "bray", redund = TRUE, funDiv = FALSE)
 A data frame with rows as sites and a column of functional redundancy
 }
 
-\references{Botta-Dukát, Z. 2005. Rao's quadratic entropy as a measure of functional diversity based on multiple traits. Journal of Vegetation Science 16:533–540.}
+\references{Botta-Duk\c3a1t, Z. 2005. Rao's quadratic entropy as a measure of functional diversity based on multiple traits. Journal of Vegetation Science 16:533–540.}
 
 \description{
 The function calculates functional redundancy as Simpson's D minus dissimilarity between species weighted by the proportions of the species.
