@@ -54,7 +54,7 @@ funredun=function(spDat,funDat,method='bray',redund=TRUE,funDiv=FALSE){
       FR[i]=Q[i]/D[i]
       }
     }
-    setTxtProgressBar(pb,m)
+    setTxtProgressBar(pb,i)
   }
  
   #builds output
