@@ -14,10 +14,15 @@ funredun(spDat, funDat, method = "bray", redund = TRUE)
 \item{method}{Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details. Default is Bray-Curtis dissimilarity.}
 
 \item{redund}{Redundancy calculation as difference from Simpson's D (R = D - Q) or uniqueness (U = Q/D). Default is difference (TRUE).}
+
+\item{funDiv}{Functional Diversity as Rao's Q (Botta-Dukát 2005). Default is false.}
 }
 \value{
 A data frame with rows as sites and a column of functional redundancy
 }
+
+\references{Botta-Dukát, Z. 2005. Rao’s quadratic entropy as a measure of functional diversity based on multiple traits. Journal of Vegetation Science 16:533–540.}
+
 \description{
 The function calculates functional redundancy as Simpson's D minus dissimilarity between species weighted by the proportions of the species.
 }
