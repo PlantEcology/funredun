@@ -11,7 +11,7 @@ devtools::install_github("PlantEcology/funredun")
 Function uses two data frames to calculate site functional redundancy spDat and funDat.
 
 ```
-funredun(spDat, funDat, method = "bray", redund = TRUE)
+funredun(spDat, funDat, method = "bray", redund = TRUE, funDiv = FALSE)
 ```
 Variable | Description 
 ------|-----
@@ -19,6 +19,10 @@ spDat | Data frame with rows as sites, columns as species, and elements as count
 funDat | Data frame with rows as species (same as spDat column names), columns as functional traits, elements as counts, measures, binary, etc.
 method | Available options include "bray", "gower", and "altGower". See <a href="https://cran.r-project.org/web/packages/vegan/index.html">vegan::vegdist</a> for details. Default is Bray-Curtis dissimilarity.
 redund | Redundancy calculation as difference from Simpson's D (R = D - Q) or uniqueness (U = Q/D). Default is difference (TRUE).
+funDiv | Functional Diversity as Rao's Q (Botta-Dukat 2005). Default is FALSE.
 
 ## Output
-A data frames is produced with rows as sites (from spDat) and a column of functional redundancy. Elements are calculated as subtraction of functional diversity (Q) from Simpson's D. Q is sum of the products of Bray-Curtis dissimilarity between species i and j, proportion of species i at the site, and proportion of species j at the site.
+A data frames is produced with rows as sites (from spDat) and a column of functional redundancy (includes a column of functional diversity if option selected).
+
+## References
+Botta-Dukat, Z. 2005. Rao's quadratic entropy as a measure of functional diversity based on multiple traits. Journal of Vegetation Science 16:533-540.
