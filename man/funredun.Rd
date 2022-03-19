@@ -13,7 +13,7 @@
 \item{funDat}{Data frame with rows as species (same as spDat column names), columns as functional traits, elements as counts, measures, binary, etc.}
 \item{method}{Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details. Default is Bray-Curtis dissimilarity.}
 \item{redund}{Redundancy calculation as difference from Simpson's D (R = D - Q) or uniqueness (U = Q/D). Default is difference (TRUE).}
-\item{funDiv}{Functional Diversity as Rao's Q (Botta-Dukat 2005). Default is FALSE.}
+\item{funDiv}{Functional Diversity as Rao's Q (Botta-Dukát 2005). Default is FALSE.}
 }
 
 \value{A data frame with rows as sites and a column of functional redundancy (includes functional diversity if option is selected).}
