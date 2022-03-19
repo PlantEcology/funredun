@@ -1,5 +1,5 @@
 # funredun
-Calculates community functional redundancy using species abundance and functional traits
+Calculates community functional redundancy as subtraction of functional diversity (Rao's Q) from Simpson's D.
 
 ## Install
 Installation in R requires <a href="https://cran.r-project.org/package=devtools">devtools</a>. Requires <a href="https://cran.r-project.org/package=vegan">vegan</a> and <a href="https://cran.r-project.org/package=usedist">usedist</a> packages to run.
