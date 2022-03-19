@@ -20,4 +20,4 @@
 
 \references{Botta-Dukát, Z. 2005. Rao's quadratic entropy as a measure of functional diversity based on multiple traits. Journal of Vegetation Science 16:533-540.}
 
-\description{The function calculates functional redundancy as Simpson's D minus dissimilarity between species weighted by the proportions of the species.}
+\description{Calculates community functional redundancy as subtraction of functional diversity (Rao's Q) from Simpson's D.}
