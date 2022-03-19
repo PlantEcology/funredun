@@ -16,7 +16,7 @@
 \item{funDiv}{Functional Diversity as Rao's Q (Botta-Dukát 2005). Default is FALSE.}
 }
 
-\value{A data frame with rows as sites and a column of functional redundancy (includes functional diversity if option is selected).}
+\value{A data frame with rows as sites and a column of functional redundancy (includes a column of functional diversity if option selected).}
 
 \references{Botta-Dukát, Z. 2005. Rao's quadratic entropy as a measure of functional diversity based on multiple traits. Journal of Vegetation Science 16:533-540.}
 
