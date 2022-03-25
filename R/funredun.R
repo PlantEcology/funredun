@@ -19,7 +19,6 @@ funredun=function(spDat,funDat,method='bray',redund=TRUE,funDiv=FALSE){
   
   #creates a vector of Simpson's diversity for the community
   D=as.vector(vegan::diversity(spDat,index='simpson'))
-  D=1-D
   
   #creates empty data frame P with same columns as input community data
   P=spDat[0,]
