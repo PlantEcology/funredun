@@ -17,8 +17,9 @@ funredun=function(spDat,funDat,method='bray',redund=TRUE,funDiv=FALSE){
   #calculates distance between species based on functional traits
   spDist=vegan::vegdist(funDat,method=method,upper=T)
   
-  #creates a vector of Simpson's diversity for the community
+  #creates a complimentary vector of Simpson's diversity for the community
   D=as.vector(vegan::diversity(spDat,index='simpson'))
+  D=1-D
   
   #creates empty data frame P with same columns as input community data
   P=spDat[0,]
