@@ -5,7 +5,8 @@ Imports: vegan, usedist
 Authors@R: 
     person("JM", "Marshall", , "marshalj@pfw.edu", role = c("aut", "cre"),
            comment = c(ORCID = " 0000-0001-6024-3758 "))
-Date: 2021
+Date: 2022
+URL: https://github.com/PlantEcology/funredun
 Description: Calculates functional redundance of a community based on inputs of species diversity (1-Simpson's D) and functional traits. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
