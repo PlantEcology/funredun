@@ -47,7 +47,7 @@ funredun=function(spDat,funDat,method='bray',redund=TRUE,funDiv=FALSE){
     
     #calculates function redundance as D-Q or functional uniqueness Q/D
     if (redund==TRUE) {
-      FR[i]=D[i]-Q[i]
+      FR[i]=(D[i]-Q[i])/D[i]
     } else {
       if (D[i]==0) {
         FR[i]==NA
