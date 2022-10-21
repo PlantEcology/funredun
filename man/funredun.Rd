@@ -6,12 +6,12 @@
 
 \title{Functional Redundancy}
 
-\usage{funredun(spDat, funDat, method = "bray", redund = TRUE, funDiv = FALSE)}
+\usage{funredun(spDat, funDat, method = "gower", redund = TRUE, funDiv = FALSE)}
 
 \arguments{
 \item{spDat}{Data frame with rows as sites, columns as species, and elements as counts}
 \item{funDat}{Data frame with rows as species (same as spDat column names), columns as functional traits, elements as counts, measures, binary, etc.}
-\item{method}{Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details. Default is Bray-Curtis dissimilarity.}
+\item{method}{Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details. Default is Gower distance.}
 \item{redund}{Redundancy calculation as difference from Simpson's D (R = D - Q) or uniqueness (U = Q/D). Default is difference (TRUE).}
 \item{funDiv}{Functional diversity as Rao's Q (Botta-Dukát 2005). Default is FALSE.}
 }
