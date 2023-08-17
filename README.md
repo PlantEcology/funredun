@@ -22,7 +22,7 @@ redund | Redundancy calculation as difference from Simpson's D (R = D - Q) or un
 funDiv | Functional Diversity as Rao's Q (Botta-Dukát 2005). Default is FALSE.
 
 ## Output
-A data frames is produced with rows as sites (from spDat) and a column of functional redundancy (includes a column of functional diversity if option selected).
+A data frame is produced with rows as sites (from spDat) and a column of functional redundancy (includes a column of functional diversity if option selected).
 
 ## References
 Botta-Dukát, Z. 2005. Rao's quadratic entropy as a measure of functional diversity based on multiple traits. Journal of Vegetation Science 16:533-540.
