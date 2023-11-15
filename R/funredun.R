@@ -37,13 +37,13 @@ funredun<-function(spDat,funDat,method='gower',redund=TRUE,funDiv=FALSE){
   
   #builds output
   if (funDiv==FALSE) {
-    FRoutput<-data.frame(cbind(FR))
-    names(FRoutput)<-'Func Redun'
+    FRoutput<-data.frame(FR)
+    names(FRoutput)<-'Func_Redun'
     rownames(FRoutput)<-rownames(spDat)
     return(FRoutput)
   } else {
-    FRoutput<-data.frame(cbind(FR,Q))
-    names(FRoutput)<-c('Func Redun','Func Div')
+    FRoutput<-data.frame(FR,Q)
+    names(FRoutput)<-c('Func_Redun','Func_Div')
     rownames(FRoutput)<-rownames(spDat)
     return(FRoutput)
   }
