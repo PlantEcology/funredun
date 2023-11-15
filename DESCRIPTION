@@ -1,6 +1,6 @@
 Package: funredun
 Title: Calculate Community Functional Redundancy
-Version: 0.3
+Version: 0.4
 Imports: vegan, usedist
 Authors@R: 
     person("JM", "Marshall", , "marshalj@pfw.edu", role = c("aut", "cre","cph"),
