@@ -2,7 +2,7 @@
 % Please edit documentation in R/funredun.R
 \name{funredun}
 \alias{funredun}
-\title{Functional Redundancy}
+\title{Calculate Community Functional Redundancy}
 \usage{
 funredun(spDat, funDat, method = "gower", redund = TRUE, funDiv = FALSE)
 }
@@ -11,15 +11,18 @@ funredun(spDat, funDat, method = "gower", redund = TRUE, funDiv = FALSE)
 
 \item{funDat}{Data frame with rows as species (same as spDat column names), columns as functional traits, elements as counts, measures, binary, etc.}
 
-\item{method}{Available options include "bray", "gower", and "altGower". See \code{\link[vegan]{vegdist}} for details. Default is Gower distance.}
+\item{method}{Available options include "bray", "gower", and "altGower". See \link[vegan:vegdist]{vegan::vegdist} for details. Default is Gower distance.}
 
 \item{redund}{Redundancy calculation as difference from Simpson's D (R = D - Q) or uniqueness (U = Q/D). Default is difference (TRUE).}
 
-\item{funDiv}{Functional Diversity as Rao's Q (Botta-Dukát 2005). Default is false.}
+\item{funDiv}{Functional Diversity as Rao's Q (Botta-Dukát 2005). Default is FALSE.}
 }
 \value{
-A data frame with rows as sites and a column of functional redundancy
+A data frame is produced with rows as sites (from spDat) and a column of functional redundancy (includes a column of functional diversity if option selected).
 }
 \description{
-The function calculates functional redundancy as Simpson's D minus dissimilarity between species weighted by the proportions of the species.
+Calculates functional redundance of a community based on inputs of species diversity (1-Simpson's D) and functional traits.
+}
+\references{
+Botta-Dukát, Z. 2005. Rao's quadratic entropy as a measure of functional diversity based on multiple traits. Journal of Vegetation Science 16:533-540.
 }
