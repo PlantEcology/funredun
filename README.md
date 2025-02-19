@@ -1,4 +1,6 @@
 # funredun
+
+## This project has migrated to <a href="https://codeberg.org/plantecology/funredun">codeberg.org/plantecology/funredun</a>. Updated information can be found there.
 Calculates community functional redundancy as subtraction of functional diversity (Rao's Q) from Simpson's D.
 
 ## Install
